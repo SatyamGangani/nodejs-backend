@@ -20,5 +20,5 @@ jobs:
           script: |
             cd /home/opc/nodejs-backend
             git pull origin main
-            npm install --production
+            npm install
             pm2 restart nodejs-backend

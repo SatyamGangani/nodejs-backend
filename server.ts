@@ -11,6 +11,10 @@ app.get("/check", (req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
 });
 
+app.get("/check-ci", (req, res) => {
+  res.json({ status: "ok", timestamp: new Date().toISOString(), ci: true });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
