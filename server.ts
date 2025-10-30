@@ -7,6 +7,10 @@ app.get("/", (req, res) => {
   res.send("✅ Node.js backend running successfully!");
 });
 
+app.get("/check", (req, res) => {
+  res.json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
